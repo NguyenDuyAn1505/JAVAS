@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0px auto;}
+        .wrapper{
+            height: 600px; width: 600px;
+        }
+        #frm1{
+            height: 80%; width: 600px;
+        }
+        .labe{
+            height: 80%; width: 50%; float: left;
+            text-align: right;
+        }
+        .inp{
+            height: 80%; width: 50%; float: left;
+        }
+    </style>
+    <script>
+        function kiemTraTen(){
+            var regTen=/(^[A-Z]{1}[a-z]+)(\s[A-Z]{1}[a-z]*)+$/
+            var ten=document.getElementById("txtName").value;
+            var ten1=frm1.txtName.value;
+            if (regTen.test(ten1)==true) {
+                alert("Nhap dung")
+            } else {
+                alert("Nhap sai")
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="get" id="frm1">
+            <fieldset>
+                <legend>Thong Tin</legend>
+                <div class="labe">
+                    <label for="">Ho Ten</label><br>
+                    <label for="">Nhan 2</label><br>
+                    <label for="">Nhan 3</label><br>
+                    <label for="">Nhan 4</label><br>
+                    <label for="">Nhan 5</label><br>
+                </div>
+                <div class="inp">
+                    <input type="text" name="" id="txtName" placeholder="Nhap Ten" onblur="kiemTraTen();"><br>
+                    <input type="text" name="" id="txtQQ" placeholder="Nhap QQ">
+                    <input type="text" name="" id="txtGT" placeholder="Nhap GT">
+                    <input type="text" name="" id="txtLop" placeholder="Nhap Lop">
+                    <input type="text" name="" id="txtGC" placeholder="Nhap GC">
+                </div>
+                <div class="cent">
+                    <center>
+                        <input type="submit" value="Dang Ky">
+                        <input type="reset" value="Huy">
+                    </center>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
